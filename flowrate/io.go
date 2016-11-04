@@ -66,7 +66,7 @@ func (r *Reader) SetBlocking(new bool) (old bool) {
 
 // Close closes the underlying reader if it implements the io.Closer interface.
 func (r *Reader) Close() error {
-	defer r.Done()
+	//defer r.Done()
 	if c, ok := r.Reader.(io.Closer); ok {
 		return c.Close()
 	}
